@@ -1,4 +1,6 @@
 /* 
+ * 
+ * Answered for : http://www.cramster.com/answer/edit/2442065/0?rec=0
  * Program to check balanced parenthesis
  * 
  */
@@ -31,6 +33,10 @@ public class Paranthesis {
 			if(lineToCheck.charAt(i)=='('){
 				paran.push("C");
 			}
+			
+			if(lineToCheck.charAt(i)=='<'){
+				paran.push("D");
+			}
 			if(lineToCheck.charAt(i)=='}'){
 				String val = paran.pop();
 				if(!val.equals("A")){
@@ -49,6 +55,12 @@ public class Paranthesis {
 					return ") missing at position "+i+" in line";
 				}
 	
+			}
+			if(lineToCheck.charAt(i)=='>'){
+				String val = paran.pop();
+				if(!val.equals("D")){
+					return "> missing at position "+i+" in line";
+				}
 			}
 		}
 		if(paran.isEmpty())
@@ -76,8 +88,11 @@ public class Paranthesis {
 	 * @param args the arguments
 	 */
 	public static void main(String args[]){
-		// The string whose value is to be checked for parenthesis
-		String value = "{hello there (braces match) [fine] }";
-		System.out.println(matchChecker(value));
+		/*
+		 *  The string whose value is to be checked for parenthesis.
+		 *  If required the input can be obtained from user by using Scanner from java.util
+		 */
+		String input = "{a [b(c <d>)] e f g}";
+		System.out.println(matchChecker(input));
 	}
 }
