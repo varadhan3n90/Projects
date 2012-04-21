@@ -27,7 +27,10 @@ class Song{
 		this.length = length;
 		this.fileSize = fileSize;
 	}
-	
+	/**
+	 * Accessor methods for title, artist and length
+	 * 
+	 */
 	public String getTitle(){
 		return title;
 	}
