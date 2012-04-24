@@ -1,6 +1,7 @@
 /*
  * Simple classes to demonstrate inheritance.
  * Answered for : http://www.cramster.com/answers-apr-12/computer-science/java-write-java-program-superclass-animal_2454315.aspx
+ * Answered on : 24/4/12
  */
 
 package classesDemo;
