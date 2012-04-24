@@ -3,13 +3,15 @@
  * IntNode is a class that is similar to a node of linked list in C defined using structure.
  * Dummy head node is used in program.
  * 
+ * head -> x -> y -> ... -> null
+ * 
  * Answered for :http://www.cramster.com/answers-apr-12/computer-science/javalinked-list-integers-guys-im-trouble-java-task-im_2450451.aspx
  * 
  */
 
-package linkedList;
+package linkedList.singleLinked;
 
-// TODO: Auto-generated Javadoc
+
 class IntNode{
 	
 	private IntNode next;
