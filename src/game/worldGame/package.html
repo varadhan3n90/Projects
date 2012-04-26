@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>The World Game</head>
+<body>
+  Welcome to the world game
+  Overview: Some of the earliest computer games were text-based and included rooms filled with items that the player could pick up. Your goal is to use the concepts that you learned in CS 111 to implement this sort of game.
+
+Details:
+
+The World
+The world should be a grid of rooms of an arbitrary size with optional exits on the NORTH, SOUTH, EAST, and WEST sides of the room. Each room should contain a number of items, stored in a linked list for that room. Each room should also have a description of that room. For example, a living room might be connected to a foyer to the NORTH, a kitchen to the WEST, and a closet to the EAST. It might contain a couch, a television, and a cactus, and have a description along the lines of “This is a living room. I’m not sure why they call it a living room, because clearly nobody is living in it.”
+
+Items
+Simply enough, each item should have a unique name and a description.
+
+The Player
+The player should start in a random room and be able to walk around the world by typing commands into the REPL. The player should have available six commands:
+Look
+Inv
+Examine item
+Get item
+Drop item
+Go direction
+
+Look- This should provide a description of the room that the player is located in, as well as a list of the items currently in that room.
+
+Inv- This command should list all of the items in the player’s inventory
+.
+Examine item- If item is one of the things in the current room OR in the player’s inventory, then display the description of it.
+
+Get item- If item is one of the items in the player’s current room, then he or she should be able to pick it up.
+
+The item will be removed from the room and added to the player’s inventory.
+
+Drop item- If item is one of the items in the player’s inventory, then drop it and add it to the list of items in the current room.
+
+Go direction- If there is a room in the direction available, then move the player to that room and provide the room’s description and list of items.
+
+Implementation Description:
+Write a REPL that continually prompts for a command from the user. When the user types in “quit”, then your program should terminate. Otherwise, the program should attempt to evaluate the command entered.
+Make a world with at least five rooms and ten interesting items. You are allowed (and strongly encouraged) to have worlds with unusual rooms and out-of-place items. 
+</body>
+</html>
