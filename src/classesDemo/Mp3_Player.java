@@ -16,10 +16,10 @@ import java.util.Iterator;
  */
 
 class Song{
-	int fileSize;
+	float fileSize;
 	String title;
 	String artist;
-	float length;
+	float length;		// length is same as duration
 	
 	public Song(String title,String artist,float length,int fileSize){
 		this.title = title;
@@ -43,7 +43,7 @@ class Song{
 		return length;
 	}
 	
-	public int getFileSize(){
+	public float getFileSize(){
 		return fileSize;
 	}
 	
