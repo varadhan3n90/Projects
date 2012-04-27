@@ -1,4 +1,4 @@
-package linkedList.doubleLinked;
+package list.linkedList.doubleLinked;
 
 //***********************************************************
 

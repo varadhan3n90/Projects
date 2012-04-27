@@ -7,7 +7,7 @@
  * Answered on : 24/4/12
  */
 
-package linkedList.doubleLinked;
+package list.linkedList.doubleLinked;
 
 
 class IntNode{

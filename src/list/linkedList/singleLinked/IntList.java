@@ -9,7 +9,7 @@
  * 
  */
 
-package linkedList.singleLinked;
+package list.linkedList.singleLinked;
 
 
 class IntNode{
