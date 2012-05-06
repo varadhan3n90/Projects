@@ -49,7 +49,7 @@ public class OptionPaneTemperature {
 	 *
 	 * @param input the input
 	 */
-	public void processInput(String input){
+	private void processInput(String input){
 		double temperature = 0.0;
 		String output="";
 		try{			
