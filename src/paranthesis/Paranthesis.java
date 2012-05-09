@@ -80,6 +80,62 @@ public class Paranthesis {
 			}
 			return "";
 		}
+		
+	}
+	
+	public static boolean isBalanced(String lineToCheck){
+		boolean balanced = true;
+		Stack<String> paran = new Stack<String>();
+		try{
+		for(int i=0;i<lineToCheck.length();i++){
+			if(lineToCheck.charAt(i)=='{'){
+				paran.push("A");
+			}
+			if(lineToCheck.charAt(i)=='['){
+				paran.push("B");
+			}
+			if(lineToCheck.charAt(i)=='('){
+				paran.push("C");
+			}
+			
+			if(lineToCheck.charAt(i)=='<'){
+				paran.push("D");
+			}
+			if(lineToCheck.charAt(i)=='}'){
+				String val = paran.pop();
+				if(!val.equals("A")){
+					return !balanced;
+				}
+			}
+			if(lineToCheck.charAt(i)==']'){
+				String val = paran.pop();
+				if(!val.equals("B")){
+					return !balanced;
+				}
+			}
+			if(lineToCheck.charAt(i)==')'){
+				String val = paran.pop();
+				if(!val.equals("C")){
+					return !balanced;
+				}
+	
+			}
+			if(lineToCheck.charAt(i)=='>'){
+				String val = paran.pop();
+				if(!val.equals("D")){
+					return !balanced;
+				}
+			}
+		}
+		if(paran.isEmpty())
+			return balanced;
+		else{
+			return !balanced;
+		}
+		}catch(Exception e){
+			return !balanced;
+		}
+		
 	}
 	
 	/**
@@ -93,6 +149,6 @@ public class Paranthesis {
 		 *  If required the input can be obtained from user by using Scanner from java.util
 		 */
 		String input = "{a [b(c <d>)] e f g}";
-		System.out.println(matchChecker(input));
+		System.out.println(isBalanced(input));
 	}
 }
