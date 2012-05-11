@@ -25,7 +25,7 @@ public class Hangman {
 	int noOfMisses = 0;
 	
 	/** The allowed misses. */
-	int allowedMisses = 5;
+	static final int allowedMisses = 5;
 	
 	/** The found char to mark characters found in the guessed word. */
 	boolean[] foundChar;
@@ -66,8 +66,15 @@ public class Hangman {
 		foundChar = new boolean[guessWord.length()];
 		boolean completed = false;
 		while( (noOfMisses < allowedMisses) && !completed){
+			System.out.print("(Guess) Enter a letter in word ");
 			printCompletedChars();
+			System.out.println("> ");
 			char guess = input.next().charAt(0);
+			if(guess=='?'){
+				System.out.println("Number of incorrect guesses till now: "+noOfMisses);
+				System.out.println("Total allowed "+Hangman.allowedMisses);
+				continue;
+			}
 			if(guessWord.contains(guess+"")){
 				for(int i=0;i<guessWord.length();i++){
 					if(guessWord.charAt(i)==guess)
@@ -86,7 +93,7 @@ public class Hangman {
 	}
 	
 	/**
-	 * Instantiates a new hangman.
+	 * Instantiates a new hangman game.
 	 */
 	public Hangman(){
 		
