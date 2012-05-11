@@ -12,7 +12,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.HashMap;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Class ColorApplet.
  */

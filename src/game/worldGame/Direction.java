@@ -3,7 +3,6 @@
  */
 package game.worldGame;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Direction.
  */
