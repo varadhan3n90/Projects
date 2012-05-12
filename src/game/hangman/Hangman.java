@@ -30,7 +30,7 @@ public class Hangman {
 	/** The found char to mark characters found in the guessed word. */
 	boolean[] foundChar;
 	
-	/** The radom value that will be used to get a word from list. */
+	/** The random value that will be used to get a word from list. */
 	static Random r = new Random();
 	
 	/**
